@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2015-05-14T20:31:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioUsuarios" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="894b9df1-5dc5-4cba-a91d-5383a6e401c0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BookleWeb"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tb_usuario]]>
+	</queryString>
+	<field name="matricula" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="perfil" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="TOTAL_REGISTROS" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$V{TOTAL_REGISTROS}.add(new BigDecimal(1))]]></variableExpression>
+		<initialValueExpression><![CDATA[new BigDecimal(0)]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="553" height="50" backcolor="#FFFFFF" uuid="ab7c5d58-d40c-43fb-8a3b-2314df1584f3"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="" x="0" y="0" width="554" height="50" backcolor="#FFFFFF" uuid="81262a4e-72cb-4b9a-8e80-4b03753d40b9"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO USUARIOS CADASTRADOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="66">
+			<rectangle>
+				<reportElement x="1" y="30" width="554" height="25" backcolor="#EBE8E8" uuid="c47ea362-6dd1-412e-9ec5-35400b953e8e"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="37" width="71" height="13" uuid="9b184500-3bb2-4c66-a199-e81cf7d6af6a"/>
+				<text><![CDATA[Matrícula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="37" width="188" height="13" uuid="147665d6-6bcc-404f-a0ef-7f413990494f"/>
+				<text><![CDATA[Nome do Aluno]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="30" y="15" width="68" height="14" uuid="3ce1a0aa-c1a4-4b2e-aa0e-d2a6e44ad4ca"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="15" width="41" height="14" uuid="4bb452b6-2505-4f7a-bb01-68636a08756a"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="15" width="50" height="14" uuid="4650b44c-6903-43a0-81a1-0106789df094"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="15" width="29" height="14" uuid="75c9d541-9765-43b3-84a7-1729605a8a1b"/>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="36" width="100" height="13" uuid="483f600c-ee58-4a5e-ac28-7b0e75b79db8"/>
+				<text><![CDATA[Perfil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="37" width="154" height="13" uuid="5b068aed-d75a-43fb-98d3-43d2ad59f057"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="70" height="20" uuid="e20aa5c0-80c6-4427-954a-5eae8e358c99"/>
+				<textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="0" width="188" height="20" uuid="3cb2d8b5-d444-45c9-b44e-73ddd3709ba7"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="20" uuid="ea8af5de-76e8-4e2f-a335-8c864eb59937"/>
+				<textFieldExpression><![CDATA[$F{perfil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="154" height="20" uuid="6d631786-48a7-45c2-95f3-40d34a855873"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="41" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="29" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="51" splitType="Stretch"/>
+	</summary>
+</jasperReport>

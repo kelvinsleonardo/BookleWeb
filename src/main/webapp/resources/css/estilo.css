@@ -1,0 +1,606 @@
+/* Padrão de estilo 
+* Import das fonts em:
+* - Menu Login (Public)
+* - Menu Sistema Interno (Private)
+*/
+*{
+    font-family: 'Roboto','Glyphicons Halflings', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+/* Logo Navbar Interno Sistema */
+.logo{
+    color: #FFF;
+    font-size: 17px;
+    padding-top: 22px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Logo Navbar Pagina Login*/
+.logo-login{
+    color: #FFF;
+    font-size: 17px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+/* Mensagens de Erro 403 e 404 */
+.error-http{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-top:100px;
+}
+
+/* Imagem 403 e 404 Mensagem de Erro */
+.img-error-header{
+    font-size:150px;
+    color: #3A5795;
+    text-shadow:#000 5px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px
+}
+
+/* Linha da Div */
+.row {
+  margin-bottom: 0px;
+}
+
+
+/* Background do Sistema */
+header{
+	background-color: #FFFFFF; 
+}
+
+/* Div Main*/
+div[role="main"]{
+    position:relative;
+    height: 100%;
+    padding:0px 0 0px 0;
+    margin:0 auto 0 auto;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+/* Rodapé */
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 30px;
+    overflow: visible;
+    z-index: 99;
+    height:30px;
+    left: 0px;
+    padding: 10px 0px 30px 0px; 
+    border-top: 2px solid #3A5795; 
+    background-color: #ffffff; 
+    text-align: center; 
+}
+
+/* Navbar */
+.navbar-default{
+    background-color: #285675;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #111A2C;
+    background-color: #356586;
+}
+
+/* Navbar Menu Active */
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover{
+    background-color: #356586;
+}
+
+
+.dropdown-menu>li>a:hover{
+    background-color: #356586 !important
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover, 
+.navbar-default .navbar-nav>.open>a:focus{
+    background-color: #356586;
+}
+
+/* Cor do submenu da navbar */
+.dropdown-menu>.active>a, 
+.dropdown-menu>.active>a:hover, 
+.dropdown-menu>.active>a:focus{
+    background-color: #356586;
+}
+
+.dropdown-menu{   
+    background-color: #285675;
+    
+}
+.dropdown-menu>li>a{
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+/* DropDown da Navbar */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 10px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/* 
+ * Estilização das mensagens de erro do Validator Form Jquery
+*/
+input.error{
+    border:1px solid #FF0000 !important; 
+}
+
+label.error,div.error{
+    float: left;
+    padding-top: 3px;
+    font-family: 'Roboto',sans-serif;
+    color:#B94A48;;
+    margin-left:5px;
+    display:inline;
+    font-size: 12px;    
+}
+
+label.error::after {	
+content: ".";
+width: 1px;
+}   
+
+
+
+/*
+ * Alteração dos Botões
+ */
+.btn-success{
+    border: #285675;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #285675;
+    padding: 10px;
+}
+
+.btn-success:hover{
+    background-color: #4D679F;
+}
+
+.btn-danger{
+    border: #595a5a;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #595a5a;
+    padding: 10px;
+}
+
+.btn-danger:hover{
+    border: #b1b1b1;
+    background-color: #b1b1b1;
+}
+
+
+.btn-primary{
+    border: #3A5795;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #285675;
+}
+
+.btn-primary:hover,.btn-primary:focus { 
+    background-color: #4D679F;
+}
+
+/* Botão maior para Login Cadastro */
+.btn-login{
+    width: 200px;
+}
+
+
+
+/* Botão para Login da Navbar */
+.btn-login-menu{
+    background-color: #3A5795;
+    color: #FFF;
+    font-weight: bold;
+    border-color: #FFF;
+    width: 100px;
+}
+
+.btn-login-menu:hover{
+    background-color: #4D679F;
+}
+
+/*
+ * Alteração Tabela
+ */
+.table-info{
+    background-color: #285675;
+    color: #FFF;
+}
+
+/*
+ * Alteração Breadcrumbs
+ */
+.breadcrumb{
+    background-color: #FFF;   
+}
+
+.breadcrumb>.active{
+   color: #111111;  
+}
+
+a, a:hover{
+  color: #3A5795;
+  cursor: pointer;
+}
+
+/*
+ * Alteração do Botão pesquisa
+ */
+.btn-info {
+    padding: 13px;
+    background-color: #285675;
+    border-color: #dce4ec;
+}
+
+
+/* Removendo espaço no navbar da tela login*/
+form {
+  margin-bottom: 0px;
+}
+
+.pull-right {
+  margin: 12px; !important;
+    
+}
+
+.mat-input{
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    height: 38px;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    -webkit-box-shadow: none;
+}
+
+.mat-input:focus{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom-color: skyblue;
+}
+
+
+.btnImprimir{
+    margin: 0;
+}
+
+.logo h2{
+    font-size:200px;
+    color: #E74C3C;
+    text-align:center;
+    margin-bottom:1px;
+    /*text-shadow:4px 4px 1px white;*/
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif !important;
+   
+}   
+.logo p{
+    color:#B1A18D;;
+    font-size:20px;
+    margin-top:1px;
+    text-align:center;
+    font-family: 'Roboto', sans-serif !important;
+}   
+.logo p span{
+    color:lightgreen;
+}   
+.sub a{
+    color:#E74C3C;
+    text-decoration:none;
+    padding:5px;
+    font-size:13px;
+    font-family: arial, serif;
+    font-weight:bold;
+    font-family: 'Roboto', sans-serif !important;
+}   
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #49C593;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .form-registrar {
+  display: none;
+}
+
+.form .form-resetar {
+  display: none; 
+}
+
+.background-login {
+  background: #285675;
+  background: -webkit-linear-gradient(right, #285675, #2980b9);
+  background: -moz-linear-gradient(right, #285675, #2980b9);
+  background: -o-linear-gradient(right, #285675, #2980b9);
+  background: linear-gradient(to left, #285675, #2980b9);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+
+/* 
+ *  Iniciando estilização para overlay com Spinner
+ *
+ */
+
+
+.loading-page-old {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../img/loading.gif) center no-repeat #fff;
+}
+
+.overlay {
+        background: #ffffff;
+        color: #666666;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 5000;
+        top: 0;
+        left: 0;
+        float: left;
+        text-align: center;
+        padding-top: 25%;
+    }
+
+.loading-page {
+  color: red;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+
+
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 20%;
+
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease;
+  animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+
+
+
+/* 
+ *  FIM estilização para overlay com Spinner
+ *
+ */
+
+.emailsolicitacao{
+  padding: 20% 0 0;
+  margin: auto;
+}
+
+.emailsolicitacao p label{
+  color:#F39C12;
+}
+
+.emailsolicitacao h2{
+  font-size: 80px;
+  color: #27AE60;
+  text-align:center;
+  margin-bottom:1px;
+  /*text-shadow:4px 4px 1px white;*/
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif !important;
+ 
+}   
+.emailsolicitacao p{
+  color:#B1A18D;;
+  font-size:20px;
+  margin-top:1px;
+  text-align:center;
+  font-family: 'Roboto', sans-serif !important;
+}   
+.emailsolicitacao p span{
+  color:lightgreen;
+}   
+.emailsolicitacao .sub a{
+  color:#27AE60;
+  text-decoration:none;
+  padding:5px;
+  font-size:13px;
+  font-family: arial, serif;
+  font-weight:bold;
+  font-family: 'Roboto', sans-serif !important;
+} 
+
+.emailsolicitacao .tituloNaoEncontrado{
+  color: #D84646;
+  margin-bottom: 20px;
+}
+
+.login-page label.error,div.error{
+  margin-top: -14px;
+  margin-bottom: 10px;
+}
+
+.btn-editar{
+  background-color: #95a5a6;
+  padding: 8px 20px;;
+}
+
+.btn-remover{
+  background-color: #95a5a6 !important;
+  padding: 8px 20px;
+}
+
+.btn-novasenha{
+  background-color: #95a5a6 !important;
+  padding: 8px 20px;
+}
+
+.btn-pesquisar{
+  background-color: #285675  !important;
+  border-color: #285675 !important;
+  padding: 8px 20px;
+}

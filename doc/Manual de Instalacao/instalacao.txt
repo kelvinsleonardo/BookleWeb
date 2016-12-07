@@ -1,0 +1,38 @@
+/*
+ * Tutorial de instalação e configuração do sistema BookleWeb
+ * @author Kelvin Santiago
+ * @Date 18-06-2015
+*/
+
+1. Abra o IDE Eclipse EE, caso não tenha instalado faça o download no link abaixo:
+    Link: https://www.eclipse.org/downloads/
+
+2. Vamos clonar o projeto do Github no Eclipse.
+    2.1 Clique em "File > Import" e procure por GIT, selecione "Projects from Git" e clique em Next.
+    2.2 Selecione Clone URL e clique em Next.
+    2.3 Em URL coloque https://github.com/kelvinsleonardo/BookleWeb.git
+    2.4 Você necessita ter uma conta no Github para clonar o projeto, será solicitado as credenciais de autenticação.
+    2.5 Selecione "master" e clique em Next.
+
+3. O banco de dados utilizado para a persistencia dos dados foi o SGBD Mysql, faça a instalação dele, o sistema bookleweb ultiliza o usuário "root" e senha "root" para logar no mysql, caso seu mysql foi criado com outros dados de login, escolha uma das opções abaixo: 
+    * Edite os arquivos do sistema bookleweb com seus dados de login do mysql nos campos correspondentes.
+        src/main/resources/META-INF/persistence.xml 
+        src/main/webapp/WEB-INF/applicationContext.xml
+    * Crie um novo usuário no banco de dados com o comando abaixo.
+        CREATE USER 'root'@'%' IDENTIFIED BY 'root';
+        GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+
+4.  Importe o arquivo configurarDatabase.sql no Mysql que está dentro da pasta Doc na raiz do projeto BookleWeb, feito isso será criado o banco de dados e a tabela tb_usuario, contendo apenas um usuário padrão cadastrado, segue dados desse usuário para utilizar no login do sistema:    
+    - Matrícula: 123456
+    - Senha: 123456
+    
+5. Este sistema utiliza o Maven que é um software de gerenciamento de projetos, então todas as dependencias que o sistema usa o maven baixa automaticamente, conforme definimos no POM.xml que é o arquivo de configuração dele. 
+
+6. Vamos inicializar o sistema no eclipse 
+    5.1 Clique em cima do projeto BookleWeb com o botão direito e selecione, Run as > Maven Build...
+    5.2 Em Goals coloque o seguinte comando: tomcat7:run, com esse comando o TomCat será inicializado.
+
+7. Se a inicialização do sistema com o TomCat foi feita da maneira correta, o sistema já está online, a URL para ao acesso ao sistema é:
+    - URL: http://localhost/9090/BookleWeb
+    - Usuario: 123456
+    - Senha: 123456
